@@ -1,5 +1,11 @@
-- name: Get bot token
-  env: 
-    bot_token: = ${{ secrets.bot_token }}
-  run:
-    music-yt.py
+name: learn-github-actions
+on: [push]
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Retrieve secret
+        env:
+          bot_token: ${{ secrets.bot_token }}
+        run: |
+          example-command "$super_secret"
