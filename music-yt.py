@@ -5,6 +5,7 @@ import wavelink
 import os
 
 client = commands.Bot(command_prefix='!', intents=discord.Intents.all())
+bot_token = os.environ['bot_token']
 
 @client.event
 async def on_ready():
@@ -23,4 +24,4 @@ async def connect_nodes():
 async def on_wavelink_node_ready(node: wavelink.Node):
     print(f'Node: <{node.identifier}> is ready')
 
-client.run(os.environ['bot_token'])
+client.run(bot_token)
