@@ -1,4 +1,0 @@
-- name: Bot token
-    env: 
-      bot_token: ${{ secrets.bot_token }}
-    run: music-yt.py
