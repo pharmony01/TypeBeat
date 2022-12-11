@@ -1,4 +1,4 @@
-name: Get bot token
-env: 
-  bot_token: = ${{ secrets.bot_token }}
-on: [push]
+- name: Get bot token
+  env: 
+    bot_token: = ${{ secrets.bot_token }}
+  
